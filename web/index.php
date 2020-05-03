@@ -2,7 +2,6 @@
     include('db_connect.php');
     if (!$conn) 
     { 
-        
         echo "Database connection failed."; 
     } 
     session_start();
@@ -31,7 +30,6 @@
                     $usererr = "Entet a validate user name";
                     echo "Hefdre";
                 }
-
                 else {
                     $query = "SELECT * FROM users WHERE userName='$huserName'"; 
                     $result = mysqli_query($conn, $query); 
@@ -70,7 +68,6 @@
     mysqli_close($conn);
     ?>
 <body>
-    
     <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
     Name: <input type="text" name="name" value=<?php echo $username ;?>>
     <span> <?php echo $usererr;?> </span><p></p>
@@ -82,6 +79,4 @@
     </form>
     <a href="home.php">Click here </a>
 </body>
-
-
 </html>
