@@ -2,6 +2,7 @@
     include('db_connect.php');
     if (!$conn) 
     { 
+        
         echo "Database connection failed."; 
     } 
     session_start();
